@@ -153,6 +153,8 @@ details[open] summary span{transform:rotate(45deg)}
   <p style="font-size:12px;color:var(--text2);margin-top:4px">PNG, JPEG, WebP</p>
   <input type="file" id="resizeInput" accept="image/*" hidden>
 </div>
+<div id="imgPreview" style="display:none;margin:20px 0;text-align:center"><img id="previewImg" style="max-width:100%;max-height:300px;border-radius:var(--radius-sm);border:1px solid var(--border)"></div>
+<div id="imgPreview" style="display:none;margin:20px 0;text-align:center"><img id="previewImg" style="max-width:100%;max-height:300px;border-radius:var(--radius-sm);border:1px solid var(--border)"></div>
 <div id="resizeLoaded" style="display:none;margin-top:20px">
   <div style="display:flex;gap:12px;margin-bottom:20px">
     <div class="form-group" style="flex:1"><label>Width (px)</label><input class="form-input" type="number" id="resW" placeholder="800" oninput="lockRatio()"></div>
@@ -181,6 +183,8 @@ document.getElementById('resizeInput').addEventListener('change',function(e){
     var img=new Image();
     img.onload=function(){
       resizeImg=img;
+      document.getElementById('previewImg').src=ev.target.result;
+      document.getElementById('imgPreview').style.display='block';
       document.getElementById('resizeLoaded').style.display='block';
       document.getElementById("resW").value=resizeImg.width;document.getElementById("resH").value=resizeImg.height;
     };
@@ -192,7 +196,7 @@ function downloadCanvas(id,fname){var c=document.getElementById(id);var a=docume
 
 function lockRatio(){if(!resizeImg||!document.getElementById('keepRatio').checked)return;document.getElementById('resH').value=Math.round(document.getElementById('resW').value*(resizeImg.height/resizeImg.width))}
 function lockRatioH(){if(!resizeImg||!document.getElementById('keepRatio').checked)return;document.getElementById('resW').value=Math.round(document.getElementById('resH').value*(resizeImg.width/resizeImg.height))}
-function doResize(){if(!resizeImg)return;var c=document.getElementById('resizeCanvas');c.width=parseInt(document.getElementById('resW').value);c.height=parseInt(document.getElementById('resH').value);c.getContext('2d').drawImage(resizeImg,0,0,c.width,c.height);document.getElementById('resizeResult').classList.add('active')}
+function doResize(){if(!resizeImg)return;var c=document.getElementById('resizeCanvas');c.width=parseInt(document.getElementById('resW').value);c.height=parseInt(document.getElementById('resH').value);c.getContext('2d').drawImage(resizeImg,0,0,c.width,c.height);document.getElementById('resizeCanvas').style.display='block';document.getElementById('resizeCanvas').style.maxWidth='100%';document.getElementById('resizeCanvas').style.display='block';document.getElementById('resizeCanvas').style.maxWidth='100%';document.getElementById('resizeResult').classList.add('active')}
   </script>
   <div class="ad-slot"><div class="ad-placeholder"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg> Ad Space</div></div>
   <h2 class="section-title">How It Works</h2>

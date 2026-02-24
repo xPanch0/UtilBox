@@ -153,6 +153,8 @@ details[open] summary span{transform:rotate(45deg)}
   
   <input type="file" id="convInput" accept="image/*" hidden>
 </div>
+<div id="imgPreview" style="display:none;margin:20px 0;text-align:center"><img id="previewImg" style="max-width:100%;max-height:300px;border-radius:var(--radius-sm);border:1px solid var(--border)"></div>
+<div id="imgPreview" style="display:none;margin:20px 0;text-align:center"><img id="previewImg" style="max-width:100%;max-height:300px;border-radius:var(--radius-sm);border:1px solid var(--border)"></div>
 <div id="convLoaded" style="display:none;margin-top:20px">
   <div class="form-group"><label>Convert to:</label><select class="form-select" id="convFormat"><option value="image/png">PNG</option><option value="image/jpeg">JPEG</option><option value="image/webp">WebP</option></select></div>
   <button class="btn btn-primary" onclick="doConvert()">🔄 Convert</button>
@@ -177,8 +179,9 @@ document.getElementById('convInput').addEventListener('change',function(e){
     var img=new Image();
     img.onload=function(){
       convImg=img;
+      document.getElementById('previewImg').src=ev.target.result;
+      document.getElementById('imgPreview').style.display='block';
       document.getElementById('convLoaded').style.display='block';
-      
     };
     img.src=ev.target.result;
   };
@@ -186,7 +189,7 @@ document.getElementById('convInput').addEventListener('change',function(e){
 });
 function downloadCanvas(id,fname){var c=document.getElementById(id);var a=document.createElement('a');a.href=c.toDataURL('image/png');a.download=fname||'image.png';a.click()}
 
-function doConvert(){if(!convImg)return;var c=document.getElementById('convCanvas');c.width=convImg.width;c.height=convImg.height;c.getContext('2d').drawImage(convImg,0,0);document.getElementById('convMsg').textContent='✓ Converted to '+document.getElementById('convFormat').value.split('/')[1].toUpperCase()+'!';document.getElementById('convResult').classList.add('active')}
+function doConvert(){if(!convImg)return;var c=document.getElementById('convCanvas');c.width=convImg.width;c.height=convImg.height;c.getContext('2d').drawImage(convImg,0,0);document.getElementById('convMsg').textContent='✓ Converted to '+document.getElementById('convFormat').value.split('/')[1].toUpperCase()+'!';document.getElementById('convCanvas').style.display='block';document.getElementById('convCanvas').style.maxWidth='100%';document.getElementById('convCanvas').style.display='block';document.getElementById('convCanvas').style.maxWidth='100%';document.getElementById('convResult').classList.add('active')}
 function dlConv(){var c=document.getElementById('convCanvas');var f=document.getElementById('convFormat').value;var a=document.createElement('a');a.href=c.toDataURL(f);a.download='converted.'+f.split('/')[1];a.click()}
   </script>
   <div class="ad-slot"><div class="ad-placeholder"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg> Ad Space</div></div>
