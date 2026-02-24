@@ -3,22 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UtilHub — 37+ Free Online Tools | Image, PDF, Audio, Dev & More</title>
-<meta name="description" content="Free online tools: compress images, merge PDFs, convert currencies, remove backgrounds, edit audio, generate QR codes, Pomodoro timer, and 30+ more. No signup, runs in your browser.">
-<meta name="keywords" content="free online tools, compress image, merge pdf, currency converter, qr code generator, image resize, word counter, password generator, pomodoro timer, what is my ip, remove background, audio speed changer, unix timestamp">
-<meta name="author" content="UtilHub">
+<title>Vocal Remover — Separate Vocals from Music | UtilHub</title>
+<meta name="description" content="Separate vocals from instrumentals using mid/side processing. Quick vocal isolation for remixes and karaoke. Free online tool.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://utilhub.app/">
-<!-- Open Graph / Social Media -->
+<link rel="canonical" href="https://utilhub.app/stem-separator">
 <meta property="og:type" content="website">
-<meta property="og:title" content="UtilHub — 37+ Free Online Tools">
-<meta property="og:description" content="Compress images, merge PDFs, convert currencies, edit audio & 30+ more free tools. No signup needed.">
-<meta property="og:url" content="https://utilhub.app/">
+<meta property="og:title" content="Vocal Remover — Separate Vocals from Music | UtilHub">
+<meta property="og:description" content="Separate vocals from instrumentals using mid/side processing. Quick vocal isolation for remixes and karaoke. Free online tool.">
+<meta property="og:url" content="https://utilhub.app/stem-separator">
 <meta property="og:site_name" content="UtilHub">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="UtilHub — Free Online Tools">
-<meta name="twitter:description" content="37+ free browser tools for images, PDFs, audio, text, and development.">
-<!-- Favicon (emoji fallback) -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vocal Remover — Separate Vocals from Music">
+<meta name="twitter:description" content="Separate vocals from instrumentals using mid/side processing. Quick vocal isolation for remixes and karaoke. Free online tool.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z64R0T7TZ6"></script>
@@ -26,14 +22,14 @@
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6253800197711103" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="ca-pub-6253800197711103">
-<!-- Schema.org Structured Data -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"UtilHub","url":"https://utilhub.app/","description":"37+ free online tools for images, PDFs, audio, text and development","applicationCategory":"UtilitiesApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Image Compression","PDF Merge","Currency Converter","QR Code Generator","Password Generator","Pomodoro Timer","IP Lookup","Audio Editor"]}
-</script>
+<!-- Schema.org -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Vocal & Stem Separator","url":"https://utilhub.app/stem-separator","description":"Separate vocals from instrumentals using mid/side processing. Quick vocal isolation for remixes and karaoke. Free online tool.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does vocal separation work?","acceptedAnswer":{"@type":"Answer","text":"It uses mid/side processing: vocals are typically center-panned, instruments are spread to the sides. The tool exploits this stereo difference."}},{"@type":"Question","name":"Is it as good as AI separation?","acceptedAnswer":{"@type":"Answer","text":"For stereo recordings, it produces decent results. For professional quality, we recommend LALAL.ai or Moises.ai."}},{"@type":"Question","name":"What formats are supported?","acceptedAnswer":{"@type":"Answer","text":"MP3, WAV, OGG, M4A and other browser-compatible audio formats."}},{"@type":"Question","name":"Are my files uploaded?","acceptedAnswer":{"@type":"Answer","text":"No, all processing happens locally in your browser. Your music files never leave your device."}}]}</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
 <style>
+
 :root{--bg:#0a0a0c;--surface:#131318;--surface2:#1a1a22;--surface3:#22222e;--border:#2a2a38;--text:#e8e6f0;--text2:#9896a8;--accent:#6c5ce7;--accent2:#a29bfe;--accent-glow:rgba(108,92,231,.3);--green:#00b894;--orange:#fdcb6e;--red:#e17055;--pink:#fd79a8;--radius:16px;--radius-sm:10px}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
@@ -127,42 +123,96 @@ footer p{color:var(--text2);font-size:13px}
 footer a{color:var(--accent2);text-decoration:none}
 @media(max-width:640px){.header-search{display:none}.modal{padding:24px}.hero{padding:50px 20px 40px}.tools-grid{grid-template-columns:1fr}}
 ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:4px}
+
+.tool-page{max-width:700px;margin:0 auto;padding:40px 24px 60px}
+.tool-page h1{font-family:'Instrument Serif',serif;font-size:clamp(28px,5vw,42px);margin-bottom:8px}
+.tool-page .subtitle{color:var(--text2);font-size:15px;margin-bottom:32px}
+.breadcrumb{max-width:700px;margin:0 auto;padding:16px 24px 0;font-size:13px;color:var(--text2)}
+.breadcrumb a{color:var(--accent2);text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+.section-title{font-family:'Instrument Serif',serif;font-size:24px;margin:48px 0 16px;padding-top:24px;border-top:1px solid var(--border)}
+details summary::-webkit-details-marker{display:none}
+details[open] summary span{transform:rotate(45deg)}
 </style>
 </head>
 <body>
 <div class="copy-toast" id="toast">Copied!</div>
 <header><div class="header-inner">
   <a href="/" class="logo"><span>Util</span>Hub</a>
-  <div class="header-search">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-    <input type="text" id="searchInput" placeholder="Search tools..." oninput="filterTools()">
-  </div>
+  <a href="/" style="color:var(--accent2);text-decoration:none;font-size:14px">← All Tools</a>
 </div></header>
-<section class="hero">
-  <h1>All the tools.<br><em>Zero hassle.</em></h1>
-  <p>Free online tools for everyday tasks. No sign-up, no limits, right in your browser.</p>
-</section>
-<div class="ad-banner"><div class="ad-placeholder" id="ad-top">
-  <!-- GOOGLE ADSENSE: Replace this div with your AdSense ad unit code -->
-  <!-- Example: <ins class="adsbygoogle" data-ad-client="ca-pub-XXXX" data-ad-slot="XXXX" data-ad-format="auto"></ins> -->
-  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-  Ad Space — Your Ad Here
-</div></div>
-<div class="categories" id="categoriesNav">
-  <button class="cat-btn active" onclick="filterCategory('all',this)">🔥 All</button>
-  <button class="cat-btn" onclick="filterCategory('image',this)">🖼️ Image</button>
-  <button class="cat-btn" onclick="filterCategory('text',this)">✍️ Text</button>
-  <button class="cat-btn" onclick="filterCategory('dev',this)">💻 Dev</button>
-  <button class="cat-btn" onclick="filterCategory('calc',this)">🧮 Math</button>
-  <button class="cat-btn" onclick="filterCategory('security',this)">🔒 Security</button>
-  <button class="cat-btn" onclick="filterCategory('audio',this)">🎵 Audio</button>
+
+<nav class="breadcrumb">
+  <a href="/">UtilHub</a> → <a href="/">Audio Tools</a> → Vocal & Stem Separator
+</nav>
+
+<div class="tool-page">
+  <h1>🎤 Vocal & Stem Separator</h1>
+  <p class="subtitle">Free, no signup, runs entirely in your browser</p>
+
+  <!-- AD SLOT -->
+  <div style="margin-bottom:24px"><div class="ad-placeholder" id="ad-tool-top" style="height:90px">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+    Ad Space
+  </div></div>
+
+  <!-- TOOL CONTENT (loaded from main app) -->
+  <div id="toolContainer" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px"></div>
+
+  <!-- AD SLOT -->
+  <div style="margin:32px 0"><div class="ad-placeholder" id="ad-tool-mid" style="height:90px">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+    Ad Space
+  </div></div>
+
+  <!-- HOW IT WORKS -->
+  <h2 class="section-title">How It Works</h2>
+  <p style="color:var(--text2);font-size:15px;line-height:1.8;margin-bottom:24px">Upload a song and use spectral mid/side processing to separate vocals from instrumentals. The tool analyzes stereo channels to isolate center-panned vocals from wider-panned instruments. For professional-grade AI separation, links to dedicated services are provided.</p>
+
+  <!-- FAQ -->
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div style="margin-bottom:32px">
+    
+        <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
+          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">How does vocal separation work?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
+          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">It uses mid/side processing: vocals are typically center-panned, instruments are spread to the sides. The tool exploits this stereo difference.</div>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
+          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">Is it as good as AI separation?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
+          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">For stereo recordings, it produces decent results. For professional quality, we recommend LALAL.ai or Moises.ai.</div>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
+          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">What formats are supported?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
+          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">MP3, WAV, OGG, M4A and other browser-compatible audio formats.</div>
+        </details>
+
+        <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
+          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">Are my files uploaded?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
+          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">No, all processing happens locally in your browser. Your music files never leave your device.</div>
+        </details>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <h2 class="section-title">Related Tools</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
+    <a href="/audio-effects" style="display:inline-block;padding:8px 16px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--accent2);text-decoration:none;font-size:13px;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">🎛️ Audio Effects Processor</a>
+          <a href="/audio-recorder" style="display:inline-block;padding:8px 16px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--accent2);text-decoration:none;font-size:13px;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">🎙️ Audio Recorder</a>
+  </div>
+
+  <!-- AD SLOT -->
+  <div style="margin:32px 0"><div class="ad-placeholder" id="ad-tool-bottom" style="height:90px">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+    Ad Space
+  </div></div>
+
+  <!-- BACK TO ALL TOOLS -->
+  <div style="text-align:center;padding:20px 0">
+    <a href="/" class="btn btn-primary" style="text-decoration:none">🧰 View All 37+ Tools</a>
+  </div>
 </div>
-<section class="tools-section"><div class="tools-grid" id="toolsGrid"></div></section>
-<div class="ad-banner"><div class="ad-placeholder" id="ad-bottom">
-  <!-- GOOGLE ADSENSE: Replace this div with your AdSense ad unit code -->
-  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-  Ad Space — Your Ad Here
-</div></div>
+
 <footer>
   <p>UtilHub &copy; 2025 — Free online tools. All tools run locally in your browser.</p>
   <p style="margin-top:8px">
@@ -172,11 +222,10 @@ footer a{color:var(--accent2);text-decoration:none}
   </p>
   <p style="margin-top:12px;font-size:11px;color:var(--text2)">Made with ❤️ — 37+ tools, zero signups, 100% free</p>
 </footer>
-<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
-  <div class="modal" id="modalContent"></div>
-</div>
 
 <script>
+// Load tool HTML and JS
+
 var speedFileArrayBuffer = null;
 var stemFileArrayBuffer = null;
 var fxFileArrayBuffer = null;
@@ -228,20 +277,15 @@ const tools = [
   { id:'url-tools', name:'URL Shortener & Encoder', desc:'Encode/decode URLs, extract parameters, and generate QR codes from any link.', icon:'🔗', iconBg:'#00b894', category:'dev', tag:'Useful' },
 ];
 
-// Slug map: tool id → SEO page URL
-const slugMap = {'img-compress':'compress-image','img-resize':'resize-image','img-convert':'image-converter','photo-filters':'photo-filters','img-adjust':'image-adjustments','crop-rotate':'crop-rotate','add-text':'add-text-to-image','collage':'collage-maker','creative-fx':'creative-effects','remove-bg':'remove-background','screenshot-beautify':'screenshot-beautifier','word-count':'word-counter','case-convert':'case-converter','lorem-gen':'lorem-ipsum-generator','json-format':'json-formatter','base64':'base64-encoder-decoder','markdown':'markdown-preview','qrcode':'qr-code-generator','password-gen':'password-generator','hash-gen':'hash-generator','unit-converter':'unit-converter','regex-test':'regex-tester','color-picker':'color-picker','audio-speed':'audio-speed-changer','audio-fx':'audio-effects','stem-split':'stem-separator','audio-record':'audio-recorder','pdf-tools':'merge-pdf','date-tools':'date-tools','currency':'currency-converter','ip-lookup':'what-is-my-ip','text-diff':'text-diff','gradient-gen':'css-gradient-generator','pomodoro':'pomodoro-timer','url-tools':'url-tools','calculator':'calculator'};
-
 function renderTools(filtered) {
   const grid = document.getElementById('toolsGrid');
   (filtered || tools).forEach(() => {}); // just to reference
-  grid.innerHTML = (filtered || tools).map(t => {
-    const slug = slugMap[t.id];
-    const href = slug ? '/' + slug : '#';
-    return `<a href="${href}" class="tool-card" data-category="${t.category}" style="text-decoration:none;color:inherit" onclick="if(!slugMap['${t.id}']){event.preventDefault();openTool('${t.id}')}">
+  grid.innerHTML = (filtered || tools).map(t => `
+    <div class="tool-card" data-category="${t.category}" onclick="openTool('${t.id}')">
       <div class="tool-icon" style="background:${t.iconBg}22;color:${t.iconBg}">${t.icon}</div>
       <h3>${t.name}</h3><p>${t.desc}</p>
       ${t.tag ? `<span class="tool-tag">${t.tag}</span>` : ''}
-    </a>`}).join('');
+    </div>`).join('');
 }
 renderTools();
 
@@ -2117,6 +2161,31 @@ async function processFx() {
     showToast('Effect applied!');
   } catch(e) { showToast('Error: ' + e.message); console.error(e); }
   btn.disabled = false; proc.style.display = 'none';
+}
+
+
+// Initialize the tool
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('toolContainer');
+  const toolHTML = getToolHTML('stem-split');
+  // Strip the close button from modal HTML
+  container.innerHTML = toolHTML.replace(/<button class="modal-close"[^>]*>×<\/button>/,'');
+  // Run initializer if exists
+  if (typeof toolInits !== 'undefined' && toolInits['stem-split']) {
+    setTimeout(toolInits['stem-split'], 200);
+  }
+  // Special inits
+  if ('stem-split' === 'qrcode') setTimeout(initQR, 200);
+  if ('stem-split' === 'password-gen') setTimeout(generatePassword, 200);
+  if ('stem-split' === 'color-picker') setTimeout(function(){renderColor('#6c5ce7')}, 200);
+  if ('stem-split' === 'unit-converter') setTimeout(updateUnits, 200);
+});
+
+function openTool(id) {
+  window.location.href = '/' + id;
+}
+function closeModal() {
+  window.location.href = '/';
 }
 </script>
 </body>

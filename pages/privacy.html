@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | UtilHub</title>
+<meta name="description" content="UtilHub Privacy Policy — How we handle your data">
+<link rel="canonical" href="https://utilhub.app/privacy">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z64R0T7TZ6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z64R0T7TZ6');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6253800197711103" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0c;--surface:#131318;--surface2:#1a1a22;--surface3:#22222e;--border:#2a2a38;--text:#e8e6f0;--text2:#9896a8;--accent:#6c5ce7;--accent2:#a29bfe;--accent-glow:rgba(108,92,231,.3);--green:#00b894;--orange:#fdcb6e;--red:#e17055;--pink:#fd79a8;--radius:16px;--radius-sm:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+header{position:sticky;top:0;z-index:100;background:rgba(10,10,12,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Instrument Serif',serif;font-size:28px;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header-search{display:flex;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:40px;padding:8px 16px;gap:8px;width:320px;transition:border-color .3s}
+.header-search:focus-within{border-color:var(--accent)}
+.header-search svg{color:var(--text2);flex-shrink:0}
+.header-search input{background:none;border:none;outline:none;color:var(--text);font-size:14px;width:100%;font-family:inherit}
+.header-search input::placeholder{color:var(--text2)}
+.hero{text-align:center;padding:80px 24px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse,var(--accent-glow) 0%,transparent 70%);pointer-events:none}
+.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(36px,6vw,64px);line-height:1.1;margin-bottom:16px;position:relative}
+.hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent2),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--text2);font-size:18px;max-width:520px;margin:0 auto;position:relative}
+.categories{display:flex;justify-content:center;gap:8px;padding:0 24px 40px;flex-wrap:wrap}
+.cat-btn{padding:10px 20px;border-radius:40px;border:1px solid var(--border);background:var(--surface);color:var(--text2);font-size:14px;font-family:inherit;cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:6px}
+.cat-btn:hover,.cat-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 4px 20px var(--accent-glow)}
+.tools-section{max-width:1200px;margin:0 auto;padding:0 24px 60px}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;cursor:pointer;transition:all .35s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--pink));opacity:0;transition:opacity .3s}
+.tool-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.tool-card:hover::before{opacity:1}
+.tool-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.tool-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.tool-card p{font-size:13px;color:var(--text2);line-height:1.5}
+.tool-tag{display:inline-block;margin-top:12px;font-size:11px;padding:4px 10px;border-radius:20px;background:var(--surface3);color:var(--text2)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.active{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);width:100%;max-width:700px;max-height:90vh;overflow-y:auto;padding:40px;position:relative;animation:modalIn .35s cubic-bezier(.4,0,.2,1)}
+@keyframes modalIn{from{opacity:0;transform:scale(.95) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--surface2);color:var(--text2);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.modal-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.modal h2{font-family:'Instrument Serif',serif;font-size:28px;margin-bottom:8px}
+.modal .subtitle{color:var(--text2);font-size:14px;margin-bottom:28px}
+.drop-zone{border:2px dashed var(--border);border-radius:var(--radius-sm);padding:40px 20px;text-align:center;cursor:pointer;transition:all .3s;margin-bottom:20px;background:var(--surface2)}
+.drop-zone:hover{border-color:var(--accent);background:rgba(108,92,231,.05)}
+.drop-zone svg{margin-bottom:8px;color:var(--text2)}
+.drop-zone p{color:var(--text2);font-size:14px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:13px;font-weight:500;margin-bottom:8px;color:var(--text2)}
+.form-input,.form-select,.form-textarea{width:100%;padding:12px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .3s}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent)}
+.form-textarea{resize:vertical;min-height:120px}
+.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239896a8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
+.btn{padding:12px 28px;border-radius:var(--radius-sm);border:none;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#8b5cf6);color:#fff;box-shadow:0 4px 15px var(--accent-glow)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 25px var(--accent-glow)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-secondary{background:var(--surface3);color:var(--text);border:1px solid var(--border)}
+.result-area{margin-top:20px;padding:20px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border);display:none}
+.result-area.active{display:block}
+.stats-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.stat-box{background:var(--surface3);padding:12px 16px;border-radius:var(--radius-sm);flex:1;min-width:120px}
+.stat-box .label{font-size:11px;color:var(--text2);margin-bottom:4px}
+.stat-box .value{font-size:18px;font-weight:700}
+.stat-box .value.green{color:var(--green)}
+.stat-box .value.orange{color:var(--orange)}
+.slider-group{display:flex;align-items:center;gap:12px}
+.slider-group input[type="range"]{flex:1;accent-color:var(--accent);height:6px}
+.slider-val{background:var(--surface3);padding:4px 10px;border-radius:6px;font-size:13px;font-weight:600;min-width:48px;text-align:center}
+.check-group{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.check-group label{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text2);cursor:pointer}
+.check-group input[type="checkbox"]{accent-color:var(--accent)}
+.tabs{display:flex;gap:4px;margin-bottom:20px;background:var(--surface2);border-radius:var(--radius-sm);padding:4px}
+.tab-btn{flex:1;padding:10px;border:none;background:transparent;color:var(--text2);font-family:inherit;font-size:13px;border-radius:8px;cursor:pointer;transition:all .2s}
+.tab-btn.active{background:var(--accent);color:#fff}
+.preview-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;max-height:300px;overflow-y:auto;font-size:14px;line-height:1.7}
+.preview-box h1,.preview-box h2,.preview-box h3{margin:12px 0 8px}
+.preview-box p{margin-bottom:8px}
+.preview-box code{background:var(--surface3);padding:2px 6px;border-radius:4px;font-size:13px}
+.preview-box pre{background:var(--surface3);padding:12px;border-radius:8px;overflow-x:auto}
+.preview-box pre code{background:none;padding:0}
+.copy-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);color:#fff;padding:12px 24px;border-radius:40px;font-size:14px;font-weight:600;z-index:999;transition:transform .4s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.copy-toast.show{transform:translateX(-50%) translateY(0)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner{width:48px;height:48px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 12px}
+.ad-banner{max-width:1200px;margin:0 auto 40px;padding:0 24px}
+.ad-placeholder{background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius-sm);height:100px;display:flex;align-items:center;justify-content:center;color:var(--text2);font-size:13px;gap:8px}
+.audio-disclaimer{background:linear-gradient(135deg,rgba(108,92,231,.08),rgba(253,121,168,.08));border:1px solid rgba(108,92,231,.2);border-radius:var(--radius-sm);padding:16px;margin-bottom:20px;font-size:13px;line-height:1.6;color:var(--text2)}
+.audio-disclaimer strong{color:var(--accent2)}
+.password-display{font-family:'Courier New',monospace;font-size:22px;letter-spacing:2px;word-break:break-all;padding:16px;background:var(--bg);border-radius:var(--radius-sm);text-align:center;margin-bottom:16px;border:1px solid var(--border);cursor:pointer;transition:border-color .2s}
+.password-display:hover{border-color:var(--accent)}
+.strength-bar{height:6px;border-radius:3px;background:var(--surface3);overflow:hidden;margin-bottom:8px}
+.strength-fill{height:100%;border-radius:3px;transition:width .4s,background .4s}
+footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center}
+footer p{color:var(--text2);font-size:13px}
+footer a{color:var(--accent2);text-decoration:none}
+@media(max-width:640px){.header-search{display:none}.modal{padding:24px}.hero{padding:50px 20px 40px}.tools-grid{grid-template-columns:1fr}}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:4px}
+</style>
+</head>
+<body>
+<header><div class="header-inner">
+  <a href="/" class="logo"><span>Util</span>Hub</a>
+  <a href="/" style="color:var(--accent2);text-decoration:none;font-size:14px">← All Tools</a>
+</div></header>
+<div style="max-width:700px;margin:0 auto;padding:40px 24px 60px">
+  <h1 style="font-family:'Instrument Serif',serif;font-size:32px;margin-bottom:24px">🔒 Privacy Policy</h1>
+  <div style="font-size:14px;line-height:1.8;color:var(--text2)"><p><strong>Last updated: February 2025</strong></p><br><p><strong style="color:var(--text)">Summary:</strong> UtilHub processes everything locally in your browser. We do not collect, store, or transmit your files or personal data.</p><br><p><strong style="color:var(--text)">1. Data Processing</strong><br>All tools run entirely in your web browser. Your files never leave your device.</p><br><p><strong style="color:var(--text)">2. External APIs</strong><br>Currency Converter uses exchange rate APIs, IP Lookup uses ipapi.co. These connections are made directly from your browser.</p><br><p><strong style="color:var(--text)">3. Analytics & Advertising</strong><br>We use Google Analytics and may display Google AdSense ads. These services may use cookies.</p><br><p><strong style="color:var(--text)">4. Cookies</strong><br>Minimal cookies for analytics and advertising only.</p><br><p><strong style="color:var(--text)">5. Third-Party Links</strong><br>Our site contains links to external services. We are not responsible for their privacy practices.</p></div>
+  <div style="text-align:center;padding:40px 0"><a href="/" class="btn btn-primary" style="text-decoration:none">🧰 View All Tools</a></div>
+</div>
+<footer>
+  <p>UtilHub © 2025 — Free online tools.</p>
+  <p style="margin-top:8px"><a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Use</a> · <a href="/about">About</a></p>
+</footer>
+</body></html>
