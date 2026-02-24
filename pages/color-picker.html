@@ -272,15 +272,20 @@ const tools = [
   { id:'url-tools', name:'URL Shortener & Encoder', desc:'Encode/decode URLs, extract parameters, and generate QR codes from any link.', icon:'🔗', iconBg:'#00b894', category:'dev', tag:'Useful' },
 ];
 
+// Slug map: tool id → SEO page URL
+const slugMap = {'img-compress':'compress-image','img-resize':'resize-image','img-convert':'image-converter','photo-filters':'photo-filters','img-adjust':'image-adjustments','crop-rotate':'crop-rotate','add-text':'add-text-to-image','collage':'collage-maker','creative-fx':'creative-effects','remove-bg':'remove-background','screenshot-beautify':'screenshot-beautifier','word-count':'word-counter','case-convert':'case-converter','lorem-gen':'lorem-ipsum-generator','json-format':'json-formatter','base64':'base64-encoder-decoder','markdown':'markdown-preview','qrcode':'qr-code-generator','password-gen':'password-generator','hash-gen':'hash-generator','unit-converter':'unit-converter','regex-test':'regex-tester','color-picker':'color-picker','audio-speed':'audio-speed-changer','audio-fx':'audio-effects','stem-split':'stem-separator','audio-record':'audio-recorder','pdf-tools':'merge-pdf','date-tools':'date-tools','currency':'currency-converter','ip-lookup':'what-is-my-ip','text-diff':'text-diff','gradient-gen':'css-gradient-generator','pomodoro':'pomodoro-timer','url-tools':'url-tools','calculator':'calculator'};
+
 function renderTools(filtered) {
   const grid = document.getElementById('toolsGrid');
   (filtered || tools).forEach(() => {}); // just to reference
-  grid.innerHTML = (filtered || tools).map(t => `
-    <div class="tool-card" data-category="${t.category}" onclick="openTool('${t.id}')">
+  grid.innerHTML = (filtered || tools).map(t => {
+    const slug = slugMap[t.id];
+    const href = slug ? '/' + slug : '#';
+    return `<a href="${href}" class="tool-card" data-category="${t.category}" style="text-decoration:none;color:inherit" onclick="if(!slugMap['${t.id}']){event.preventDefault();openTool('${t.id}')}">
       <div class="tool-icon" style="background:${t.iconBg}22;color:${t.iconBg}">${t.icon}</div>
       <h3>${t.name}</h3><p>${t.desc}</p>
       ${t.tag ? `<span class="tool-tag">${t.tag}</span>` : ''}
-    </div>`).join('');
+    </a>`}).join('');
 }
 renderTools();
 
@@ -2161,10 +2166,12 @@ async function processFx() {
 
 // Initialize the tool
 document.addEventListener('DOMContentLoaded', function() {
-  const container = document.getElementById('toolContainer');
-  const toolHTML = getToolHTML('color-picker');
-  // Strip the close button from modal HTML
-  container.innerHTML = toolHTML.replace(/<button class="modal-close"[^>]*>×<\/button>/,'');
+  var container = document.getElementById('toolContainer');
+  var toolHTML = getToolHTML('color-picker');
+  // Strip the modal close button - find first <h2 and keep from there
+  var idx = toolHTML.indexOf('<h2');
+  if (idx > 0) toolHTML = toolHTML.substring(idx);
+  container.innerHTML = toolHTML;
   // Run initializer if exists
   if (typeof toolInits !== 'undefined' && toolInits['color-picker']) {
     setTimeout(toolInits['color-picker'], 200);
