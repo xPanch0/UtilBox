@@ -4,27 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>URL Encoder Decoder & QR Generator | UtilHub</title>
-<meta name="description" content="Encode and decode URLs, parse URL parameters, and generate QR codes from any link. Free online URL toolkit.">
+<meta name="description" content="Encode, decode, parse URLs and generate QR codes. Free online toolkit.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://utilhub.app/url-tools">
 <meta property="og:type" content="website">
 <meta property="og:title" content="URL Encoder Decoder & QR Generator | UtilHub">
-<meta property="og:description" content="Encode and decode URLs, parse URL parameters, and generate QR codes from any link. Free online URL toolkit.">
+<meta property="og:description" content="Encode, decode, parse URLs and generate QR codes. Free online toolkit.">
 <meta property="og:url" content="https://utilhub.app/url-tools">
 <meta property="og:site_name" content="UtilHub">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="URL Encoder Decoder & QR Generator">
-<meta name="twitter:description" content="Encode and decode URLs, parse URL parameters, and generate QR codes from any link. Free online URL toolkit.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z64R0T7TZ6"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z64R0T7TZ6');</script>
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6253800197711103" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="ca-pub-6253800197711103">
-<!-- Schema.org -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"URL Tools","url":"https://utilhub.app/url-tools","description":"Encode and decode URLs, parse URL parameters, and generate QR codes from any link. Free online URL toolkit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does URL encoding do?","acceptedAnswer":{"@type":"Answer","text":"It converts special characters (spaces, &, =, etc.) into percent-encoded format (%20, %26, %3D) for safe use in URLs."}},{"@type":"Question","name":"Can I see all URL parameters?","acceptedAnswer":{"@type":"Answer","text":"Yes, the URL Parser shows each query parameter as a separate key-value pair in a clear table."}},{"@type":"Question","name":"Can I generate a QR code from any URL?","acceptedAnswer":{"@type":"Answer","text":"Yes! Enter any URL and click Generate to create a downloadable QR code."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"URL Tools","url":"https://utilhub.app/url-tools","description":"Encode, decode, parse URLs and generate QR codes. Free online toolkit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does URL encoding do?","acceptedAnswer":{"@type":"Answer","text":"Converts special characters to percent-encoded format for safe URL use."}},{"@type":"Question","name":"Can I see URL parameters?","acceptedAnswer":{"@type":"Answer","text":"Yes, Parser shows each query parameter as key-value pairs."}}]}</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
@@ -129,7 +123,6 @@ footer a{color:var(--accent2);text-decoration:none}
 .tool-page .subtitle{color:var(--text2);font-size:15px;margin-bottom:32px}
 .breadcrumb{max-width:700px;margin:0 auto;padding:16px 24px 0;font-size:13px;color:var(--text2)}
 .breadcrumb a{color:var(--accent2);text-decoration:none}
-.breadcrumb a:hover{text-decoration:underline}
 .section-title{font-family:'Instrument Serif',serif;font-size:24px;margin:48px 0 16px;padding-top:24px;border-top:1px solid var(--border)}
 details summary::-webkit-details-marker{display:none}
 details[open] summary span{transform:rotate(45deg)}
@@ -141,85 +134,56 @@ details[open] summary span{transform:rotate(45deg)}
   <a href="/" class="logo"><span>Util</span>Hub</a>
   <a href="/" style="color:var(--accent2);text-decoration:none;font-size:14px">← All Tools</a>
 </div></header>
-
-<nav class="breadcrumb">
-  <a href="/">UtilHub</a> → <a href="/">Developer Tools</a> → URL Tools
-</nav>
-
+<nav class="breadcrumb"><a href="/">UtilHub</a> → <a href="/">Developer Tools</a> → URL Tools</nav>
 <div class="tool-page">
   <h1>🔗 URL Tools</h1>
   <p class="subtitle">Free, no signup, runs entirely in your browser</p>
+  <div style="margin-bottom:24px"><div class="ad-placeholder" style="height:90px"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg> Ad Space</div></div>
 
-  <!-- AD SLOT -->
-  <div style="margin-bottom:24px"><div class="ad-placeholder" id="ad-tool-top" style="height:90px">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-    Ad Space
-  </div></div>
-
-  <!-- TOOL CONTENT (loaded from main app) -->
-  <div id="toolContainer" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px"></div>
-
-  <!-- AD SLOT -->
-  <div style="margin:32px 0"><div class="ad-placeholder" id="ad-tool-mid" style="height:90px">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-    Ad Space
-  </div></div>
-
-  <!-- HOW IT WORKS -->
-  <h2 class="section-title">How It Works</h2>
-  <p style="color:var(--text2);font-size:15px;line-height:1.8;margin-bottom:24px">Three tools in one: URL Encode/Decode converts special characters for safe URL transmission. URL Parser breaks down any URL into protocol, host, path, and query parameters. URL to QR generates a scannable QR code from any link.</p>
-
-  <!-- FAQ -->
-  <h2 class="section-title">Frequently Asked Questions</h2>
-  <div style="margin-bottom:32px">
+  <!-- TOOL -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px">
     
+      <div class="tabs"><button class="tab-btn active" onclick="pdfTab(this,'urlEncode')">Encode/Decode</button><button class="tab-btn" onclick="pdfTab(this,'urlParse')">Parse URL</button><button class="tab-btn" onclick="pdfTab(this,'urlQr')">URL → QR</button></div>
+      <div id="urlEncode">
+        <div class="form-group"><label>Input URL or Text</label><textarea class="form-input" id="urlEncInput" rows="3" placeholder="https://example.com/path?q=hello world" oninput="urlEncDec()"></textarea></div>
+        <div style="display:flex;gap:8px;margin-bottom:12px"><button class="btn btn-secondary" onclick="urlDoEnc()">Encode</button><button class="btn btn-secondary" onclick="urlDoDec()">Decode</button></div>
+        <div class="form-group"><label>Result</label><textarea class="form-input" id="urlEncOutput" rows="3" readonly></textarea></div>
+      </div>
+      <div id="urlParse" style="display:none">
+        <div class="form-group"><label>Enter URL</label><input class="form-input" id="urlParseInput" placeholder="https://example.com/path?key=val&foo=bar#section" oninput="parseUrl()"></div>
+        <div id="urlParseResult" style="font-size:13px"></div>
+      </div>
+      <div id="urlQr" style="display:none">
+        <div class="form-group"><label>URL for QR Code</label><input class="form-input" id="urlQrInput" placeholder="https://example.com"></div>
+        <button class="btn btn-primary" onclick="urlToQr()">📱 Generate QR</button>
+        <div style="text-align:center;margin-top:16px"><canvas id="urlQrCanvas"></canvas></div>
+      </div>
+  </div>
+
+  <div style="margin:32px 0"><div class="ad-placeholder" style="height:90px"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg> Ad Space</div></div>
+  <h2 class="section-title">How It Works</h2>
+  <p style="color:var(--text2);font-size:15px;line-height:1.8;margin-bottom:24px">URL Encode/Decode, URL Parser (breaks down parameters), and URL to QR code generator.</p>
+  <h2 class="section-title">Frequently Asked Questions</h2><div style="margin-bottom:32px">
         <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
           <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">What does URL encoding do?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
-          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">It converts special characters (spaces, &, =, etc.) into percent-encoded format (%20, %26, %3D) for safe use in URLs.</div>
+          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">Converts special characters to percent-encoded format for safe URL use.</div>
         </details>
 
         <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
-          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I see all URL parameters?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
-          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">Yes, the URL Parser shows each query parameter as a separate key-value pair in a clear table.</div>
-        </details>
-
-        <details style="border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px">
-          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I generate a QR code from any URL?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
-          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">Yes! Enter any URL and click Generate to create a downloadable QR code.</div>
-        </details>
-  </div>
-
-  <!-- RELATED TOOLS -->
+          <summary style="padding:14px 18px;cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I see URL parameters?<span style="color:var(--accent2);font-size:20px;transition:transform .2s">+</span></summary>
+          <div style="padding:0 18px 14px;color:var(--text2);font-size:14px;line-height:1.7">Yes, Parser shows each query parameter as key-value pairs.</div>
+        </details></div>
   <h2 class="section-title">Related Tools</h2>
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
-    <a href="/qr-code-generator" style="display:inline-block;padding:8px 16px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--accent2);text-decoration:none;font-size:13px;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">📱 QR Code Generator</a>
-          <a href="/json-formatter" style="display:inline-block;padding:8px 16px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--accent2);text-decoration:none;font-size:13px;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">{ } JSON Formatter & Validator</a>
-  </div>
-
-  <!-- AD SLOT -->
-  <div style="margin:32px 0"><div class="ad-placeholder" id="ad-tool-bottom" style="height:90px">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-    Ad Space
-  </div></div>
-
-  <!-- BACK TO ALL TOOLS -->
-  <div style="text-align:center;padding:20px 0">
-    <a href="/" class="btn btn-primary" style="text-decoration:none">🧰 View All 37+ Tools</a>
-  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px"><a href="/qr-code-generator" style="display:inline-block;padding:8px 16px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--accent2);text-decoration:none;font-size:13px">📱 QR Code Generator</a>
+          <a href="/json-formatter" style="display:inline-block;padding:8px 16px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--accent2);text-decoration:none;font-size:13px">{ } JSON Formatter & Validator</a></div>
+  <div style="margin:32px 0"><div class="ad-placeholder" style="height:90px"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg> Ad Space</div></div>
+  <div style="text-align:center;padding:20px 0"><a href="/" class="btn btn-primary" style="text-decoration:none">🧰 View All 37+ Tools</a></div>
 </div>
-
 <footer>
   <p>UtilHub &copy; 2025 — Free online tools. All tools run locally in your browser.</p>
-  <p style="margin-top:8px">
-    <a href="/privacy">Privacy Policy</a> · 
-    <a href="/terms">Terms of Use</a> · 
-    <a href="/about">About</a>
-  </p>
-  <p style="margin-top:12px;font-size:11px;color:var(--text2)">Made with ❤️ — 37+ tools, zero signups, 100% free</p>
+  <p style="margin-top:8px"><a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Use</a> · <a href="/about">About</a></p>
 </footer>
-
 <script>
-// Load tool HTML and JS
 
 var speedFileArrayBuffer = null;
 var stemFileArrayBuffer = null;
@@ -2163,32 +2127,14 @@ async function processFx() {
   btn.disabled = false; proc.style.display = 'none';
 }
 
-
-// Initialize the tool
-document.addEventListener('DOMContentLoaded', function() {
-  var container = document.getElementById('toolContainer');
-  var toolHTML = getToolHTML('url-tools');
-  // Strip the modal close button - find first <h2 and keep from there
-  var idx = toolHTML.indexOf('<h2');
-  if (idx > 0) toolHTML = toolHTML.substring(idx);
-  container.innerHTML = toolHTML;
-  // Run initializer if exists
-  if (typeof toolInits !== 'undefined' && toolInits['url-tools']) {
-    setTimeout(toolInits['url-tools'], 200);
-  }
-  // Special inits
-  if ('url-tools' === 'qrcode') setTimeout(initQR, 200);
-  if ('url-tools' === 'password-gen') setTimeout(generatePassword, 200);
-  if ('url-tools' === 'color-picker') setTimeout(function(){renderColor('#6c5ce7')}, 200);
-  if ('url-tools' === 'unit-converter') setTimeout(updateUnits, 200);
-});
-
-function openTool(id) {
-  window.location.href = '/' + id;
-}
-function closeModal() {
-  window.location.href = '/';
-}
+// Auto-init for specific tools
+(function(){
+  if (typeof toolInits !== 'undefined' && toolInits['url-tools']) setTimeout(toolInits['url-tools'], 100);
+  if ('url-tools' === 'qrcode') setTimeout(function(){try{initQR()}catch(e){}}, 200);
+  if ('url-tools' === 'password-gen') setTimeout(function(){try{generatePassword()}catch(e){}}, 200);
+  if ('url-tools' === 'color-picker') setTimeout(function(){try{renderColor('#6c5ce7')}catch(e){}}, 200);
+  if ('url-tools' === 'unit-converter') setTimeout(function(){try{updateUnits()}catch(e){}}, 200);
+})();
 </script>
 </body>
 </html>
